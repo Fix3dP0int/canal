@@ -1,5 +1,5 @@
 # arm64
-FROM canal/osbase:v3-arm64
+FROM canal/osbase:v3-arm64@sha256:96f5dbaa6fd67dc076ffa97e7be0308810c32b1a17d8c0bc6040857e3f84383c
 
 MAINTAINER agapple (jianghang115@gmail.com)
 
