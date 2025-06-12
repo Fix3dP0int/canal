@@ -107,7 +107,7 @@
         <kafka_version>2.4.0</kafka_version>
         <pulsar_version>2.11.4</pulsar_version>
         <mysql_driver_version>5.1.48</mysql_driver_version>
-        <maven-jacoco-plugin.version>0.8.3</maven-jacoco-plugin.version>
+        <maven-jacoco-plugin.version>0.8.13</maven-jacoco-plugin.version>
         <maven-surefire.version>2.22.1</maven-surefire.version>
         <argline>-server -Xms512m -Xmx1024m -Dfile.encoding=UTF-8
             -Djava.net.preferIPv4Stack=true -XX:MetaspaceSize=128m -XX:MaxMetaspaceSize=256m
