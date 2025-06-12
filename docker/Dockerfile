@@ -1,4 +1,4 @@
-FROM canal/osbase:v3-amd64
+FROM canal/osbase:v3-amd64@sha256:2b1557d9fc14471fc39e5a398cefcd5d7e2777ab743dc29d467822aa883f8127
 #FROM canal/osbase:v3-arm64
 
 LABEL agapple (jianghang115@gmail.com)
