@@ -1,5 +1,5 @@
 # arm64
-FROM centos:centos7.9.2009@sha256:73f11afcbb50d8bc70eab9f0850b3fa30e61a419bc48cf426e63527d14a8373b
+FROM centos:centos7.9.2009@sha256:be65f488b7764ad3638f236b7b515b3678369a5124c47b8d32916d6487418ea4
 
 ARG jdk_rpm
 ARG platform_env
