@@ -1,0 +1,33 @@
+name: Renovate
+
+on:
+  schedule:
+    - cron: "0 0 * * 0"  # Runs weekly on Sunday at midnight UTC
+  pull_request:
+    branches:
+      - main  # Run when a pull request is opened or updated on the 'main' branch
+  workflow_dispatch: # Manually trigger the workflow
+
+jobs:
+  renovate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Configure renovate token
+        run: |
+          if [[ "${RENOVATE_TOKEN}" != ""  ]]; then
+            echo "RENOVATE_TOKEN=${RENOVATE_TOKEN}" >> $GITHUB_ENV
+          else
+            echo "RENOVATE_TOKEN=${GITHUB_TOKEN}" >> $GITHUB_ENV
+          fi
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          RENOVATE_TOKEN: ${{ secrets.RENOVATE_TOKEN }}
+      - name: Self-hosted Renovate
+        uses: renovatebot/github-action@8ac70de2fe55752c573155866e30735411e3b61c # v41.0.22
+        with:
+          configurationFile: .github/renovate.json
+          token: ${{ secrets.RENOVATE_TOKEN }}
+        env: 
+          RENOVATE_AUTODISCOVER: true

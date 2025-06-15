@@ -1,4 +1,4 @@
-FROM canal/osadmin:v3-amd64
+FROM canal/osadmin:v3-amd64@sha256:3dbda0e1bc3a36cf339aded3621d444724b1344c9db66e436b80070f6531c72f
 #FROM canal/osadmin:v3-arm64
 
 MAINTAINER agapple (jianghang115@gmail.com)
